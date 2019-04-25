@@ -1,0 +1,6 @@
+if(errors)
+    h2.error Oops! Looks like you did not fill something:
+    ul.error.message
+        each error in errors
+            li
+                =error.message

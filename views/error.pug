@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= message
+  a.button(href='/books') Press Here to return!
+  h2= error.status
+  pre #{error.stack}

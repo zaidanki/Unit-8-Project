@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  if err
+      p there has been an error!
+  h1 Books
+  p
+   a(class="button" href="/books/new") Create New Book
+  table
+    thead
+     tr
+      th Title
+      th Author
+      th Genre
+      th Year
+    tbody
+     each book in results
+      tr
+       td
+        a(href='/books/' + book.id)= book.title
+       td= book.author
+       td= book.genre
+       td= book.year
+
+
+
+
